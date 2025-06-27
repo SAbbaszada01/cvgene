@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CV Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 CV Generator</h1>
+        <p>Məlumatlarınızı daxil edin, AI peşəkar CV hazırlasın:</p>
+        
+        <div class="input-section">
+            <input type="text" id="fullName" placeholder="Ad Soyad">
+            <input type="text" id="profession" placeholder="Peşə">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="phone" placeholder="Telefon">
+            <textarea id="experience" placeholder="İş təcrübəsi"></textarea>
+            <textarea id="skills" placeholder="Bacarıqlar"></textarea>
+            <button onclick="generateCV()">CV Yarat</button>
+        </div>
+
+        <div class="cv-preview" id="cvPreview">
+            <div class="cv-header">
+                <h2 id="cvName">Ad Soyad</h2>
+                <p id="cvProfession">Peşə</p>
+            </div>
+            <div class="cv-body">
+                <div class="cv-section">
+                    <h3>Əlaqə</h3>
+                    <p id="cvContact">Email | Telefon</p>
+                </div>
+                <div class="cv-section">
+                    <h3>İş Təcrübəsi</h3>
+                    <p id="cvExperience">Təcrübə burada görünəcək</p>
+                </div>
+                <div class="cv-section">
+                    <h3>Bacarıqlar</h3>
+                    <p id="cvSkills">Bacarıqlar burada görünəcək</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions" id="actions" style="display: none;">
+            <button onclick="downloadPDF()">PDF Yüklə</button>
+            <button onclick="downloadImage()">Şəkil Yüklə</button>
+        </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
